@@ -5,6 +5,7 @@
 }
 
 $breakpoint-medium: 992px;
+$breakpoint-small: 576px;
 
 $primary-color: #ff7e5f;
 $gradient-color: #feb47b;
@@ -91,7 +92,7 @@ h2 {
 .main {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 100px 10px;
 
     .content {
@@ -149,6 +150,44 @@ h2 {
     }
     .card {
         width: 80%;
+    }
+}
+@include responsive($breakpoint-small){
+    .card-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+    .card {
+        width: 80%;
+    }
+    .main{
+        flex-direction: column;
+        gap: 50px;
+
+        .content{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            min-width: 300px;
+            
+            h1{
+                width: 100%;
+            }
+            p{
+                width: 80%;
+            }
+        }
+        img{
+            min-width: 300px;
+        }
+    }
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 

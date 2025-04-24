@@ -61,7 +61,7 @@ h2 {
 .main {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 100px 10px;
 }
 .main .content {
@@ -118,6 +118,42 @@ h2 {
   }
   .card {
     width: 80%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .card-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+  .card {
+    width: 80%;
+  }
+  .main {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .main .content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-width: 300px;
+  }
+  .main .content h1 {
+    width: 100%;
+  }
+  .main .content p {
+    width: 80%;
+  }
+  .main img {
+    min-width: 300px;
+  }
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
