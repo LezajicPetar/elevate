@@ -1,3 +1,11 @@
+@mixin responsive($max-screen-size){
+    @media screen and (max-width: $max-screen-size){
+        @content;
+    }
+}
+
+$breakpoint-medium: 992px;
+
 $primary-color: #ff7e5f;
 $gradient-color: #feb47b;
 $text-color: white;
@@ -11,6 +19,7 @@ $padding-primBut-navbar: 15px 30px;
 $font-size-primBut-p: 18px;
 $body-text-color: #333;
 $primBut-hover-shadow-color: 0px 5px 15px rgba(255, 126, 95, 0.4);
+$logo-font-size: 24px;
 
 /* General Styles */
 body {
@@ -33,7 +42,7 @@ h2 {
     margin-bottom: 10px;
         
     .logo {
-        font-size: 24px;
+        font-size: $logo-font-size;
         font-weight: bold;
         color: $primary-color;
     }
@@ -132,7 +141,7 @@ h2 {
 }
 
 /* Responsive */
-@media screen and (max-width: 992px) {
+@include responsive($breakpoint-medium){
     .card-list {
         flex-direction: column;
         align-items: center;
@@ -142,4 +151,5 @@ h2 {
         width: 80%;
     }
 }
+
 
