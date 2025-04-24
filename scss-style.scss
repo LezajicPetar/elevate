@@ -1,7 +1,21 @@
+$primary-color: #ff7e5f;
+$gradient-color: #feb47b;
+$text-color: white;
+$features-background-color: #f3f3f3;
+$background-color: white;
+$footer-background-color: #222;
+$box-shadow-color: 0 2px 10px rgba(0, 0, 0, 0.1);
+$primary-font: Arial, sans-serif;
+$card-footer-padding: 20px;
+$padding-primBut-navbar: 15px 30px;
+$font-size-primBut-p: 18px;
+$body-text-color: #333;
+$primBut-hover-shadow-color: 0px 5px 15px rgba(255, 126, 95, 0.4);
+
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    color: #333;
+    font-family: $primary-font;
+    color: $body-text-color;
     margin: 0;
     padding: 0;
 }
@@ -14,14 +28,14 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: $padding-primBut-navbar;
+    box-shadow: $box-shadow-color;
     margin-bottom: 10px;
         
     .logo {
         font-size: 24px;
         font-weight: bold;
-        color: #ff7e5f;
+        color: $primary-color;
     }
 
     .nav-links {
@@ -38,7 +52,7 @@ h2 {
             font-weight: bold;
             
             &:hover {
-                color: #ff7e5f;
+                color: $primary-color;
             }
         }
     }
@@ -47,20 +61,20 @@ h2 {
 /* Primary Button */
 .primary-btn {
     display: inline-block;
-    padding: 15px 30px;
+    padding: $padding-primBut-navbar;
     cursor: pointer;
     
-    font-size: 18px;
+    font-size: $font-size-primBut-p;
     font-weight: bold;
-    color: white;
+    color: $text-color;
 
     text-decoration: none;
     border: none;
     border-radius: 8px;
-    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    background: linear-gradient(45deg, $primary-color, $gradient-color);
 
     &:hover {
-        box-shadow: 0px 5px 15px rgba(255, 126, 95, 0.4);
+        box-shadow: $primBut-hover-shadow-color;
     }
 }
 
@@ -77,11 +91,11 @@ h2 {
     
     h1 {
         font-size: 48px;
-        color: #ff7e5f;
+        color: $primary-color;
     }
     
     p {
-        font-size: 18px;
+        font-size: $font-size-primBut-p;
     }
     
     img {
@@ -91,7 +105,7 @@ h2 {
 
 /* Features & Plans Sections */
 .features {
-    background: #f3f3f3;
+    background: $features-background-color;
 }
 .center-section {
     text-align: center;
@@ -102,19 +116,19 @@ h2 {
     justify-content: space-between;
 }
 .card {
-    background: white;
-    padding: 20px;
+    background: $background-color;
+    padding: $card-footer-padding;
     width: 27%;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: $box-shadow-color;
 }
 
 /* Footer */
 .footer {
     text-align: center;
-    padding: 20px;
-    background: #222;
-    color: white;
+    padding: $card-footer-padding;
+    background: $footer-background-color;
+    color: $text-color;
 }
 
 /* Responsive */
@@ -127,12 +141,5 @@ h2 {
     .card {
         width: 80%;
     }
-}
-.box{
-    padding: 20px;
-    margin: 20px;
-    background-color: red;
-    display: inline-block;
-    width: 500px;
 }
 
