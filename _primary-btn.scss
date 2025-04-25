@@ -1,0 +1,20 @@
+@use 'variables' as *;
+
+.primary-btn {
+    display: inline-block;
+    padding: $padding-primBut-navbar;
+    cursor: pointer;
+    
+    font-size: $font-size-primBut-p;
+    font-weight: bold;
+    color: $text-color;
+
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg, $primary-color, $gradient-color);
+
+    &:hover {
+        box-shadow: $primBut-hover-shadow-color;
+    }
+}

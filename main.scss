@@ -1,0 +1,98 @@
+
+@use 'variables' as *;
+@use 'primary-btn' as *;
+@use 'header';
+@use 'content' as *;
+
+
+
+/* General Styles */
+body {
+    font-family: $primary-font;
+    color: $body-text-color;
+    margin: 0;
+    padding: 0;
+}
+h2 {
+    font-size: 32px;
+}
+
+/* Features & Plans Sections */
+.features {
+    background: $features-background-color;
+}
+.center-section {
+    text-align: center;
+    padding: 50px 10px;
+}
+.card-list {
+    display: flex;
+    justify-content: space-between;
+}
+.card {
+    background: $background-color;
+    padding: $card-footer-padding;
+    width: 27%;
+    border-radius: 10px;
+    box-shadow: $box-shadow-color;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: $card-footer-padding;
+    background: $footer-background-color;
+    color: $text-color;
+}
+
+/* Responsive */
+@include responsive($breakpoint-medium){
+    .card-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+    .card {
+        width: 80%;
+    }
+}
+@include responsive($breakpoint-small){
+    .card-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+    .card {
+        width: 80%;
+    }
+    .main{
+        flex-direction: column;
+        gap: 50px;
+
+        .content{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            min-width: 300px;
+            
+            h1{
+                width: 100%;
+            }
+            p{
+                width: 80%;
+            }
+        }
+        img{
+            min-width: 300px;
+        }
+    }
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+

@@ -1,0 +1,35 @@
+@use 'variables' as *;
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $padding-primBut-navbar;
+    box-shadow: $box-shadow-color;
+    margin-bottom: 10px;
+        
+    .logo {
+        font-size: $logo-font-size;
+        font-weight: bold;
+        color: $primary-color;
+    }
+
+    .nav-links {
+        list-style: none;
+        padding: 0;
+        
+        li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+}
